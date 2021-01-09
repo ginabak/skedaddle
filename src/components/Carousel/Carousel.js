@@ -23,7 +23,7 @@ export function Carousel() {
             return (
               <div
                 className={className}
-                style={{ ...style, display: "block", background: "green" }}
+                style={{ ...style, display: "block", background: "blue" }}
                 onClick={onClick}
               />
             );
