@@ -1,3 +1,4 @@
+import { Carousel } from './components/Carousel';
 import logo from './logo.svg';
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <Carousel/>
       </header>
     </div>
   );
