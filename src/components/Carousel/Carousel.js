@@ -17,24 +17,6 @@ export function Carousel(){
     <div>
           <Slider {...settings}>
       <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
       <Iframe url="https://directory.goodonyou.eco/"
     width="450px"
     height="450px"
@@ -42,6 +24,54 @@ export function Carousel(){
     className="myClassname"
     display="initial"
     position="relative"/>
+      </div>
+      <div>
+      <Iframe url="https://directory.goodonyou.eco/"
+    width="450px"
+    height="450px"
+    id="myId"
+    className="myClassname"
+    display="initial"
+    position="relative"/>
+      </div>
+      <div>
+      <Iframe url="https://directory.goodonyou.eco/"
+    width="450px"
+    height="450px"
+    id="myId"
+    className="myClassname"
+    display="initial"
+    position="relative"/>
+      </div>
+      <div>
+      <Iframe url="https://directory.goodonyou.eco/"
+    width="450px"
+    height="450px"
+    id="myId"
+    className="myClassname"
+    display="initial"
+    position="relative"/>
+      </div>
+      <div>
+      <Iframe url="https://directory.goodonyou.eco/"
+    width="450px"
+    height="450px"
+    id="myId"
+    className="myClassname"
+    display="initial"
+    position="relative"/>
+      </div>
+      <div>
+      <Iframe url="https://directory.goodonyou.eco/"
+    width="450px"
+    height="450px"
+    id="myId"
+    className="myClassname"
+    display="initial"
+    position="relative"/>
+      </div>
+    </Slider>
+      
       </div>);
 }
 
