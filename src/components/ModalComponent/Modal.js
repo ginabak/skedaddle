@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-modal-overlay'
+import { Carousel } from '../Carousel'
 import 'react-modal-overlay/dist/index.css'
  
 export function ModalComponent() {
@@ -9,7 +10,7 @@ export function ModalComponent() {
     <div>
       <button onClick={() => setIsOpen(true)}>Shop Now!</button>
       <Modal show={isOpen} closeModal={() => setIsOpen(false)}>
-        <h4> we are shopping </h4>
+        <Carousel/>
       </Modal>
     </div>
   )
