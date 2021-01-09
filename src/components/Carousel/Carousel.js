@@ -5,6 +5,12 @@ import { MediaCard } from '@shopify/polaris';
 import './Carousel.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import communityThrift from './images/community-thrift.png';
+import pennyArcade from './images/penny-arcade.png'; 
+import readyToWearAgain from './images/ready-to-wear-again.png';
+import urbanOutfitters from './images/urban-outfitters.png'; 
+import wornWear from './images/worn-wear.png';
+
 
 export function Carousel() {
 
@@ -46,6 +52,14 @@ export function Carousel() {
             ""
       ]
 
+      const storeImages = [ 
+            readyToWearAgain, 
+            urbanOutfitters,
+            communityThrift, 
+            pennyArcade,
+            wornWear, 
+      ]
+
       const settings = {
             dots: true,
             infinite: true,
@@ -68,7 +82,16 @@ export function Carousel() {
                                                 content: 'Shop',
                                                 onAction: (url) => {},
                                           }}                                    >
-                                                
+                                    <img
+                                          alt=""
+                                          width="100%"
+                                          height="100%"
+                                          style={{
+                                                objectFit: 'cover',
+                                                objectPosition: 'center',
+                                          }}
+                                          src={storeImages[index]}
+                                          />            
                                     </MediaCard>
                               );
                         })}
