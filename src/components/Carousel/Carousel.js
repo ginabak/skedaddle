@@ -1,5 +1,5 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
-import Iframe from 'react-iframe';
 import Slider from "react-slick";
 import './Carousel.css';
 import "slick-carousel/slick/slick.css";
@@ -21,12 +21,7 @@ export function Carousel() {
                         {stores.map((url) => {
                               return (
                                     <div>
-                                          <Iframe url={url}
-                                                width="450px"
-                                                height="450px"
-                                                className="store"
-                                                display="initial"
-                                                position="relative" />
+                                         <iframe src={url} width="700" height="500" frameBorder="0"/>
                                     </div>
                               );
                         })}
