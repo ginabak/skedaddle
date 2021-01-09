@@ -68,6 +68,7 @@ export function Carousel() {
                                                 content: 'Shop',
                                                 onAction: (url) => {},
                                           }}                                    >
+                                                
                                     </MediaCard>
                               );
                         })}
