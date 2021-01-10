@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "cheerio": "^1.0.0-rc.5",
+    "babel-jest": "^26.6.0",
     "iframe": "^1.0.0",
     "material-ui-icons": "^1.0.0-beta.36",
     "puppeteer": "^5.5.0",
