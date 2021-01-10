@@ -38,7 +38,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function MediaCard() {
+
+
+export function MediaCard({ url, description, image, name }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -49,22 +51,16 @@ export function MediaCard() {
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
-          </Avatar>
-        }
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={name}
       />
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
+        image={image}
         title="Paella dish"
       />
       <CardContent>
