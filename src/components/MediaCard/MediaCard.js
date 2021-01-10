@@ -32,9 +32,6 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: "rotate(180deg)",
   },
-  avatar: {
-    backgroundColor: red[500],
-  },
 }));
 
 export function MediaCard({ url, description, image, name }) {
@@ -50,7 +47,6 @@ export function MediaCard({ url, description, image, name }) {
             onClick={() => {
               window.open(url, "_blank");
             }}
-            backgroundColor="blue"
           >
             shop
           </IconButton>
