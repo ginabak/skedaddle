@@ -72,5 +72,3 @@ export function MediaCard({ url, description, image, name }) {
     </Card>
   );
 }
-
-export default MediaCard;
