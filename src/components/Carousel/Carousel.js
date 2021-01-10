@@ -66,11 +66,11 @@ export function Carousel() {
   return (
     <div>
       <Slider {...settings}>
-        {stores.map((store, index) => {
-          <Container key={`${index}-container`} maxWidth="md">
-            <MediaCard key={index} url={store.url} name={store.name} description={store.description} image={store.image} />
-          </Container>
-        })}
+        {stores.map((store, index) =>
+        (<Container key={`${index}-container`} maxWidth="md">
+          <MediaCard key={index} url={store.url} name={store.name} description={store.description} image={store.image} />
+        </Container>))
+        }
       </Slider>
 
     </div>);
