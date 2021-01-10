@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React from 'react';
+import React, {useCallback} from 'react';
 import Slider from "react-slick";
-import { MediaCard } from '@shopify/polaris';
+import { MediaCard } from '../MediaCard';
 import './Carousel.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -34,41 +34,45 @@ export function Carousel() {
             "https://readytowearagain.com/",
             "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
             "https://communitythriftandvintage.com/",
+            "https://pennyarcadevintage.com/collections/denim", 
             "https://wornwear.patagonia.com/",
-            "https://www.hazlewoodcompany.com/",
       ];
       const storeNames = [
             "Ready To Wear Again",
             "Urban Renewal",
             "Community Thrift and Vintage",
+            "Penny Arcade",
             "Worn Wear Patagonia",
-            "Hazlewood",
-            ""
       ]
+
+      const storeDescriptions = [
+            "a thrift store where you can buy and sell high-quality secondhand clothing and accessories in new or near new condition.",
+            "(based in Vancouver), sells a tightly curated collection of recycled fashion at a low price point.",
+            "all about repurposing and reinventing vintage pieces at affordable prices",
+            ""
+      ];
 
       const settings = {
             dots: true,
             infinite: true,
             speed: 500,
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />
 
       };
 
+
+      const openSite = useCallback((website) => {window.open(website, "_blank")},);
+
       return (
             <div>
                   <Slider {...settings}>
-                        {stores.map((url,index) => {
+                        {stores.map((website,index) => {
                               return (
-                                    <MediaCard
-                                          title={storeNames[index]}
-                                          primaryAction={{
-                                                content: 'Shop',
-                                                onAction: (url) => {},
-                                          }}                                    >
-                                                
+                                    <MediaCard>
+
                                     </MediaCard>
                               );
                         })}
@@ -76,6 +80,7 @@ export function Carousel() {
                   </Slider>
 
             </div>);
-}
 
-export default Carousel;
+                  }
+
+                  export default Carousel;
