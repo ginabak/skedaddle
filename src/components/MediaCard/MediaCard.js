@@ -18,7 +18,7 @@ import Heart from "react-animated-heart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 700,
   },
   media: {
     height: 0,
