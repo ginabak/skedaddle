@@ -14,7 +14,7 @@
     "material-ui-icons": "^1.0.0-beta.36",
     "puppeteer": "^5.5.0",
     "react": "^17.0.1",
-    "react-animated-heart": "0.0.5",
+    "react-animated-heart": "^0.0.5",
     "react-dom": "^17.0.1",
     "react-iframe": "^1.8.0",
     "react-scripts": "4.0.1",

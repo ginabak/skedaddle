@@ -11,14 +11,14 @@ import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
-import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import Heart from "react-animated-heart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 700,
+    maxWidth: "100%",
+    fontFamily: 'Arapey'
   },
   media: {
     height: 0,
@@ -41,13 +41,6 @@ const useStyles = makeStyles((theme) => ({
 
 export function MediaCard({ url, description, image, name }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-  // const openSite = useCallback((website) => { window.open(website, "_blank") },);
-
   const [isClick, setClick] = useState(false);
 
   return (
@@ -55,17 +48,18 @@ export function MediaCard({ url, description, image, name }) {
       <CardHeader
         action={
           <IconButton
-            aria-label="settings"
+            aria-label="open new window"
             onClick={() => {
               window.open(url, "_blank");
             }}
+            backgroundColor="blue"
           >
             shop
           </IconButton>
         }
         title={name}
       />
-      <CardMedia className={classes.media} image={image} title="Paella dish" />
+      <CardMedia className={classes.media} image={image} title={name} />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           {description}
@@ -76,18 +70,7 @@ export function MediaCard({ url, description, image, name }) {
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        ></IconButton>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent></CardContent>
-      </Collapse>
     </Card>
   );
 }

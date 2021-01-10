@@ -2,6 +2,7 @@
 import React, { useCallback } from 'react';
 import Slider from "react-slick";
 import { MediaCard } from '../MediaCard';
+import { Container } from '@material-ui/core';
 import './Carousel.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -58,9 +59,7 @@ export function Carousel() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
+    arrows: true,
   };
 
 
@@ -70,9 +69,9 @@ export function Carousel() {
       <Slider {...settings}>
         {stores.map((store, index) => {
           return (
-            <div className="mediacard">
+            <Container maxWidth="md">
               <MediaCard key={index} url={store.url} name={store.name} description={store.description} image={store.image} />
-            </div>
+            </Container>
           );
         })}
       </Slider>
