@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
-import React, { useCallback } from 'react';
+import React from 'react';
 import Slider from "react-slick";
 import { MediaCard } from '../MediaCard';
 import { Container } from '@material-ui/core';
@@ -13,14 +12,14 @@ import urbanOutfitters from './images/urban-outfitters.png';
 import wornWear from './images/worn-wear.png';
 
 export function Carousel() {
-  const storesExclude = ["https://kotn.com/", "https://www.hazlewoodcompany.com/", "https://www.mightygoodbasics.com/", "https://us.organicbasics.com/", "https://communitythriftandvintage.com/", "https://teamtimbuktu.com/", "https://aliceandwhittles.com/"];
-  const store = [
-    "https://readytowearagain.com/",
-    "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
-    "https://communitythriftandvintage.com/",
-    "https://pennyarcadevintage.com/collections/denim",
-    "https://wornwear.patagonia.com/",
-  ];
+  // const storesExclude = ["https://kotn.com/", "https://www.hazlewoodcompany.com/", "https://www.mightygoodbasics.com/", "https://us.organicbasics.com/", "https://communitythriftandvintage.com/", "https://teamtimbuktu.com/", "https://aliceandwhittles.com/"];
+  // const store = [
+  //   "https://readytowearagain.com/",
+  //   "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
+  //   "https://communitythriftandvintage.com/",
+  //   "https://pennyarcadevintage.com/collections/denim",
+  //   "https://wornwear.patagonia.com/",
+  // ];
   const stores = [
     {
       name: "Urban Renewal",
