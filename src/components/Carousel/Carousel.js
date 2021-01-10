@@ -67,11 +67,9 @@ export function Carousel() {
     <div>
       <Slider {...settings}>
         {stores.map((store, index) => {
-          return (
-            <Container maxWidth="md">
-              <MediaCard key={index} url={store.url} name={store.name} description={store.description} image={store.image} />
-            </Container>
-          );
+          <Container key={`${index}-container`} maxWidth="md">
+            <MediaCard key={index} url={store.url} name={store.name} description={store.description} image={store.image} />
+          </Container>
         })}
       </Slider>
 
