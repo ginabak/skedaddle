@@ -47,13 +47,15 @@ export function MediaCard({ url, description, image, name }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  // const openSite = useCallback((website) => { window.open(website, "_blank") },);
+
 
   return (
     <Card className={classes.root}>
       <CardHeader
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
+          <IconButton aria-label="settings" onClick={() => { window.open(url, "_blank") }}>
+            shop
           </IconButton>
         }
         title={name}
@@ -65,8 +67,7 @@ export function MediaCard({ url, description, image, name }) {
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+          {description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -90,7 +91,7 @@ export function MediaCard({ url, description, image, name }) {
         <CardContent>
         </CardContent>
       </Collapse>
-    </Card>
+    </Card >
   );
 }
 

@@ -25,59 +25,55 @@ export function Carousel() {
 			name: "Ready To Wear Again",
 			url: "https://readytowearagain.com/",
 			image: readyToWearAgain,
-			description: "HI"
+			description: "a thrift store where you can buy and sell high-quality secondhand clothing and accessories in new or near new condition.",
 		},
 		{
 			name: "Urban Renewal",
 			url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
 			image: urbanOutfitters,
-			description: "HI"
+			description: "all about repurposing and reinventing vintage pieces at affordable prices",
+		},
+		{
+			name: "Community Thrift and Vintage",
+			url: "https://communitythriftandvintage.com/",
+			image: communityThrift,
+			description: "(based in Vancouver), sells a tightly curated collection of recycled fashion at a low price point.",
+		},
+		{
+			name: "Penny Arcade",
+			url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
+			image: pennyArcade,
+			description: "(based in Toronto), sells unique selections for both women and men."
+		},
+		{
+			name: "Worn Wear Patagonia",
+			url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
+			image: wornWear,
+			description: "sells pre-loved patagonia clothes!"
 		}
 	]
-	const storeNames = [
-		"Ready To Wear Again",
-		"Urban Renewal",
-		"Community Thrift and Vintage",
-		"Penny Arcade",
-		"Worn Wear Patagonia",
-	]
 
-	const storeDescriptions = [
-		"a thrift store where you can buy and sell high-quality secondhand clothing and accessories in new or near new condition.",
-		"(based in Vancouver), sells a tightly curated collection of recycled fashion at a low price point.",
-		"all about repurposing and reinventing vintage pieces at affordable prices",
-		"bla bla",
-		"bla"
-	];
-	const storeImages = [
-		readyToWearAgain,
-		urbanOutfitters,
-		communityThrift,
-		pennyArcade,
-		wornWear,
-	]
 
 	const settings = {
 		dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 1,
+		slidesToShow: 2,
 		slidesToScroll: 1,
 	};
 
 
-	const openSite = useCallback((website) => { window.open(website, "_blank") },);
 
 	return (
 		<div>
 			<Slider {...settings}>
 				{stores.map((store, index) => {
 					return (
-						<MediaCard key={index} url={store.url} name={store.name} description={store.description} image={storeImages[index]}>
-						</MediaCard>
+						<div className="mediacard">
+							<MediaCard key={index} url={store.url} name={store.name} description={store.description} image={store.image} />
+						</div>
 					);
 				})}
-
 			</Slider>
 
 		</div>);
