@@ -17,10 +17,10 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 700,
   },
   media: {
-    height: 0,
+    height: 500,
     paddingTop: '56.25%', // 16:9
   },
   expand: {
@@ -47,15 +47,13 @@ export function MediaCard({ url, description, image, name }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  // const openSite = useCallback((website) => { window.open(website, "_blank") },);
-
 
   return (
     <Card className={classes.root}>
       <CardHeader
         action={
           <IconButton aria-label="settings" onClick={() => { window.open(url, "_blank") }}>
-            shop
+            <p>shop</p>
           </IconButton>
         }
         title={name}

@@ -12,71 +12,72 @@ import urbanOutfitters from './images/urban-outfitters.png';
 import wornWear from './images/worn-wear.png';
 
 export function Carousel() {
-	const storesExclude = ["https://kotn.com/", "https://www.hazlewoodcompany.com/", "https://www.mightygoodbasics.com/", "https://us.organicbasics.com/", "https://communitythriftandvintage.com/", "https://teamtimbuktu.com/", "https://aliceandwhittles.com/"];
-	const store = [
-		"https://readytowearagain.com/",
-		"https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
-		"https://communitythriftandvintage.com/",
-		"https://pennyarcadevintage.com/collections/denim",
-		"https://wornwear.patagonia.com/",
-	];
-	const stores = [
-		{
-			name: "Ready To Wear Again",
-			url: "https://readytowearagain.com/",
-			image: readyToWearAgain,
-			description: "a thrift store where you can buy and sell high-quality secondhand clothing and accessories in new or near new condition.",
-		},
-		{
-			name: "Urban Renewal",
-			url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
-			image: urbanOutfitters,
-			description: "all about repurposing and reinventing vintage pieces at affordable prices",
-		},
-		{
-			name: "Community Thrift and Vintage",
-			url: "https://communitythriftandvintage.com/",
-			image: communityThrift,
-			description: "(based in Vancouver), sells a tightly curated collection of recycled fashion at a low price point.",
-		},
-		{
-			name: "Penny Arcade",
-			url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
-			image: pennyArcade,
-			description: "(based in Toronto), sells unique selections for both women and men."
-		},
-		{
-			name: "Worn Wear Patagonia",
-			url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
-			image: wornWear,
-			description: "sells pre-loved patagonia clothes!"
-		}
-	]
+  const storesExclude = ["https://kotn.com/", "https://www.hazlewoodcompany.com/", "https://www.mightygoodbasics.com/", "https://us.organicbasics.com/", "https://communitythriftandvintage.com/", "https://teamtimbuktu.com/", "https://aliceandwhittles.com/"];
+  const store = [
+    "https://readytowearagain.com/",
+    "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
+    "https://communitythriftandvintage.com/",
+    "https://pennyarcadevintage.com/collections/denim",
+    "https://wornwear.patagonia.com/",
+  ];
+  const stores = [
+    {
+      name: "Urban Renewal",
+      url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
+      image: urbanOutfitters,
+      description: "all about repurposing and reinventing vintage pieces at affordable prices",
+    },
+    {
+      name: "Community Thrift and Vintage",
+      url: "https://communitythriftandvintage.com/",
+      image: communityThrift,
+      description: "(based in Vancouver), sells a tightly curated collection of recycled fashion at a low price point.",
+    },
+    {
+      name: "Penny Arcade",
+      url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
+      image: pennyArcade,
+      description: "(based in Toronto), sells unique selections for both women and men."
+    },
+    {
+      name: "Worn Wear Patagonia",
+      url: "https://www.urbanoutfitters.com/en-ca/brands/urban-renewal",
+      image: wornWear,
+      description: "sells pre-loved patagonia clothes!"
+    },
+    {
+      name: "Ready To Wear Again",
+      url: "https://readytowearagain.com/",
+      image: readyToWearAgain,
+      description: "a thrift store where you can buy and sell high-quality secondhand clothing and accessories in new or near new condition.",
+    },
+  ]
 
 
-	const settings = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 2,
-		slidesToScroll: 1,
-	};
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+  };
 
 
 
-	return (
-		<div>
-			<Slider {...settings}>
-				{stores.map((store, index) => {
-					return (
-						<div className="mediacard">
-							<MediaCard key={index} url={store.url} name={store.name} description={store.description} image={store.image} />
-						</div>
-					);
-				})}
-			</Slider>
+  return (
+    <div>
+      <Slider {...settings}>
+        {stores.map((store, index) => {
+          return (
+            <div className="mediacard">
+              <MediaCard key={index} url={store.url} name={store.name} description={store.description} image={store.image} />
+            </div>
+          );
+        })}
+      </Slider>
 
-		</div>);
+    </div>);
 
 }
 
